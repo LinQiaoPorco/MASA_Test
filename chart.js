@@ -58,11 +58,11 @@ function getVirtulData(year) {
       }
     }
     data.push([echarts.format.formatTime('yyyy-MM-dd', time), items.join('|')]);
-    console.log(data);
+    // console.log(data);
   }
   return data;
 }
-
+console.log(getVirtulData('2017'));
 // var temp = getVirtulData('2017');
 // for (let i = 0; i < temp.length; i++){
 //     // for (let j = 0; j < temp[i].length; j++)
