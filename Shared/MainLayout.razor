@@ -1,0 +1,116 @@
+﻿@inherits LayoutComponentBase
+
+<MApp>
+    <MAppBar Flat App Color="white" Class="m-bar--underline">
+        <span>Masa.Framework</span>
+        <MSpacer></MSpacer>
+        <MButton Text>
+            <a href="https://blazor.masastack.com/">About</a>
+        </MButton>
+    </MAppBar>
+    <MNavigationDrawer Permanent App ExpandOnHover="@(!LockSidebar)">
+        <MList Dense Nav>
+            <MListItem Link Href="/">
+                <MListItemContent>
+                    <MListItemTitle>Home</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+            <MListItem Link Href="counter">
+                <MListItemContent>
+                    <MListItemTitle>Counter</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+            <MListItem Link Href="fetchdata">
+                <MListItemContent>
+                    <MListItemTitle>Fetch data</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+            <MListItem Link Href="select">
+                <MListItemContent>
+                    <MListItemTitle>Select Test</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+        </MList>
+        <MButton Small Fab Class="nav-toggle-btn" Color="primary" OnClick="ChangeLock">
+            <MIcon Class="white--text">
+                @(LockSidebar ? "mdi-lock-outline" : "mdi-lock-open-outline")
+            </MIcon>
+        </MButton>
+    </MNavigationDrawer>
+
+    <MMain>
+        <MContainer Fluid>
+            <CascadingValue Value="this">
+                @Body
+            </CascadingValue>
+        </MContainer>
+    </MMain>
+</MApp>
+
+@code {
+    public bool LockSidebar = true;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private void ChangeLock()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        LockSidebar = !LockSidebar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
